@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>汇融易 - 商户管理后台</title>
+<meta name="keywords" content="汇融易,借款,放贷,经营流水,汇卡商务" />
+<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+<link rel="stylesheet" type="text/css" href="../resources/css/mp-workframe.css"/>
+<style type="text/css">
+			.small-title{
+				padding:5px 55px;font-size:15px;
+			}
+			#content .results p{
+				line-height:28px;padding-left:54px;
+			}
+			#xxoo td{
+				text-align:left;padding:5px 60px;letter-spacing:3px;
+			}
+		</style>
+</head>
+
+<body>
+<div id="workframe-wrapper" class="clearfix">
+  <div id="location">
+    <p>当前位置：我的申请</p>
+  </div>
+  <div id="content" class="report">
+    <h3 class="title"><span>商户借款订单详情</span>&nbsp;&nbsp;<span class="related-menu"><a href="javascript:void(0);">在线联系</a></span></h3>
+    <div class="how-to-ask">
+    	<strong>借贷流程：</strong>&nbsp;<img src="../resources/images/mp/how-to-ask.gif" width="586" height="24" alt=""/>
+    </div>
+    <div class="report-tab-area">
+    	<ul class="tab-title clearfix">
+				<li onclick="location.href='my-req-process.html';">受理进度</li>
+				<li class="disabled">还款计划</li>
+				<li class="cur">产品详情</li>
+				<li for="inst-info" onclick="location.href='my-req-detail.html';">机构信息</li>
+			</ul>
+			<div class="tab-content">
+				<div class="results report" style="padding:10px 0 10px 50px;">
+					<h3 class="small-title">红 棉 贷</h3>
+					<table width="80%" border="0" cellspacing="0" cellpadding="0" class="data-table" style="margin:10px 30px;">
+						<tr>
+    		<td class="label">额度范围</td>
+    		<td class="data">1~50万</td>
+    		<td class="label">期限范围</td>
+    		<td class="data">1--3个月</td>
+    	</tr>
+    	<tr>
+    		<td class="label">还款方式</td>
+    		<td class="data">分期还款</td>
+    		<td class="label">放贷时间</td>
+    		<td class="data">7个工作日</td>
+    	</tr>
+    	<tr>
+    		<td class="label">业务受理地区</td>
+    		<td class="data">北京、广东省</td>
+    		<td class="label">利率</td>
+    		<td class="data">10%--18%</td>
+    	</tr>
+    	<tr>
+    		<td class="label">产品状态</td>
+    		<td class="data">上架</td>
+    		<td class="label">产品上架时间</td>
+    		<td class="data">2012年12月1日</td>
+    	</tr>
+					</table>
+					<h3 class="small-title">产 品 特 点</h3>
+					<p>无抵押、无担保、可提前还款</p>
+					<h3 class="small-title">申 请 条 件</h3>
+					<table width="80%" border="0" cellspacing="0" cellpadding="0" class="data-table" style="margin:10px 30px;">
+    	<tr>
+    		<td class="label">经营流水要求</td>
+    		<td class="data">个人帐户月流水30万或对公帐户月流水30万</td>
+    	</tr>
+    	<tr>
+    		<td class="label">经营时间要求</td>
+    		<td class="data">2年以上</td>
+    	</tr>
+    	<tr>
+    		<td class="label">注册资金要求</td>
+    		<td class="data">100万以上(成立满3年，可放宽至50万以上)</td>
+    	</tr>
+    </table>
+    <h3 class="small-title">所 需 材 料</h3>
+    <table width="80%" border="0" cellspacing="0" cellpadding="0" style="margin:10px 30px;" id="xxoo">
+    	<tr>
+    		<td class="label">1.身份证</td>
+    	</tr>
+    	<tr>
+    		<td class="label">2.营业执照正本,副本</td>
+    	</tr>
+    	<tr>
+    		<td class="label">3.组织机构代码证正本</td>
+    	</tr>
+    	<tr>
+    		<td class="label">4.验资报告，企业贷款卡</td>
+    	</tr>
+    	<tr>
+    		<td class="label">5.股东决议书</td>
+    	</tr>
+    	<tr>
+    		<td class="label">6.财务报表，企业近半年的银行对账单或税单(年营业额在600万及以上)</td>
+    	</tr>
+    	<tr>
+    		<td class="label">7.办公地点租赁合同及近1个月的缴费清单</td>
+    	</tr>
+    	<tr>
+    		<td class="label">8.房产证明</td>
+    	</tr>
+    </table>
+					<div class="uop">
+						<a href="want-prod-req.html" class="dark-btn">我要申请</a>&nbsp;&nbsp;
+						<a href="prod-req.html" class="dark-btn">返&nbsp;回</a>
+					</div>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="uop"><a href="javascript:void(0);" class="dark-btn">订单撤销</a>&nbsp;&nbsp;&nbsp;<a href="my-req.html" class="dark-btn">返&nbsp;回</a></div>
+		</div>
+  </div>
+</div>
+<script src="../resources/js/jquery-min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+			$(function(){
+				$(".data-list tr:even").addClass("even");
+				$(".data-list tr").hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+				$(".dark-btn").hover(function(){
+					$(this).addClass("dark-btn-hover");
+				},function(){
+					$(this).removeClass("dark-btn-hover");
+				});
+			});
+		</script> 
+<!--[if IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+</body>
+</html>

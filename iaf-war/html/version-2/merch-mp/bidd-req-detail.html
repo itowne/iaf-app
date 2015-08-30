@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>汇融易 - 商户管理后台</title>
+		<meta name="keywords" content="汇融易,借款,放贷,经营流水,汇卡商务" />
+		<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/mp-workframe.css"/>
+	</head>
+	<body>
+		<div id="workframe-wrapper" class="clearfix">
+			<div id="location">
+				<p>当前位置：我要借款&nbsp;&gt;&gt;&nbsp;竞投申请</p>
+			</div>
+			<div id="content">
+				<h3 class="title"><span>借款信息详情</span></h3>
+				<div class="results report">
+					<table width="80%" border="0" cellspacing="0" cellpadding="0" class="data-table">
+						<tr>
+							<td class="label">额度范围</td>
+							<td class="data">50万</td>
+							<td class="label">期限范围</td>
+							<td class="data">3个月</td>
+						</tr>
+						<tr>
+							<td class="label">年利率</td>
+							<td class="data">10%</td>
+							<td class="label">还款方式</td>
+							<td class="data">分期还款</td>
+						</tr>
+						<tr>
+							<td class="label">借款地区</td>
+							<td class="data">广东省</td>
+							<td class="label">申请时间</td>
+							<td class="data">2012年12月1日</td>
+						</tr>
+						<tr>
+							<td class="label">申请剩余时间</td>
+							<td class="data">20天12小时</td>
+							<td class="label">申请状态</td>
+							<td class="data">正常</td>
+						</tr>
+						<tr>
+							<td class="label">受理机构</td>
+							<td class="data">不限</td>
+							<td class="label">目前受理情况</td>
+							<td class="data">3笔</td>
+						</tr>
+						<tr>
+							<td class="label">借款用途</td>
+							<td class="data" colspan="3">年底资金周转</td>
+						</tr>
+					</table>
+					<div class="uop">
+						<a href="javascript:void(0);" class="dark-btn">修&nbsp;改</a>&nbsp;&nbsp;&nbsp;
+						<a href="javascript:void(0);" class="dark-btn">撤&nbsp;销</a>&nbsp;&nbsp;&nbsp;
+						<a href="bidd-req.html" class="dark-btn">返&nbsp;回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../resources/js/jquery-min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".data-list tr:even").addClass("even");
+				$(".data-list tr").hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+				$(".dark-btn").hover(function(){
+					$(this).addClass("dark-btn-hover");
+				},function(){
+					$(this).removeClass("dark-btn-hover");
+				});
+			});
+		</script>
+		<!--[if IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+	</body>
+</html>

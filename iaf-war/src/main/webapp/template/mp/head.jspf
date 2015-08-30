@@ -1,0 +1,23 @@
+<n:head styles="mp-workframe" scripts="jquery,mp-workframe" />
+<n:ui includes="grid,form" />
+<s:if test="hasActionErrors">
+	<s:iterator value="actionErrors">
+		<script type="text/javascript">
+			alert("<s:property escape="false"/>");
+		</script>
+	</s:iterator>
+</s:if>
+<s:if test="hasActionMessages()">
+	<s:iterator value="actionMessages">
+		<script type="text/javascript">
+			alert("<s:property escape="false"/>");
+		</script>
+	</s:iterator>
+</s:if>
+<s:if test="hasFieldErrors">
+	<s:iterator value="fieldErrors">
+		<script type="text/javascript">
+			alert("<s:property escape="false"/>");
+		</script>
+	</s:iterator>
+</s:if>

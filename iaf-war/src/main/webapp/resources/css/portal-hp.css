@@ -1,0 +1,194 @@
+﻿@charset "utf-8";
+/* Lizy4ever@2013.03 */
+
+#ads{
+	height:320px;overflow:hidden;
+}
+
+/* main */
+#main{
+	margin:10px auto 0px;
+}
+#main-list{
+	float:left;width:650px;border:1px solid #ddd;background:url(../images/portal/bg-main-list.gif) repeat-x;
+}
+#sidebar{
+	float:right;width:340px;
+}
+
+/* main-list */
+#main-list .list-type{
+	height:39px;background:#f1f7fd;border-bottom:1px solid #e5ebee;
+}
+#main-list .list-type li{
+	float:left;
+	width: 130px;
+	height: 39px;
+	border-right: 1px solid #e5ebee;
+	line-height: 39px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+}
+#main-list .list-type li.cur{
+	background:#fff;border-top:1px solid #0092ff;line-height:37px;
+}
+
+.main-search{
+	height:47px;line-height:47px;padding-left:10px;overflow:hidden;position:relative;
+}
+.search-btn{
+	width:62px;height:25px;line-height:25px;background:url(../images/portal/bg-search-btn.gif) no-repeat;border:0;color:#575757;font-size:13px;font-weight:bold;text-indent:15px;letter-spacing:1px;cursor:pointer;
+}
+.search-btn-hover{
+	background-position:0 -25px;
+}
+.main-input{
+	width:50px;text-align:right;
+}
+#main-list a.more{
+	color:#ffaa00;font-size:14px;font-weight:bold;
+}
+#main-list a.more:hover{
+	color:#ff9a37;
+}
+.main-search label,.main-search input,.main-search select{
+	vertical-align:middle;
+}
+.main-search label,.search-btn{
+	margin-left:10px;
+}
+
+/* data-grid */
+.data-grid td,.data-grid img{
+	vertical-align:middle;
+}
+.data-grid td{
+	font-size:13px;color:#6B6B6B;
+}
+.data-grid .data-row{
+	height:88px;background:url(../images/portal/bg-data-row.gif) repeat-x;overflow:hidden;
+}
+.data-grid .view-detail{
+	width:75px;height:33px;border:0;background:url(../images/portal/bg-btn.gif) no-repeat;color:#fff;font-size:13px;font-weight:bold;cursor:pointer;
+}
+#prods .brief{
+	text-align:center;
+}
+#prods .pic{
+	border-style:solid;border-color:#dddddd;border-width:1px 0 0 1px;padding:2px;
+}
+#prods .feature{
+	color:#333;font-weight:bold;border-style:solid;border-color:#dddddd;border-width:1px 1px 0 0;padding:2px;
+}
+#prods .inst{
+	color:#6b6b6b;font-size:12px;border-style:solid;border-color:#dddddd;border-width:0 1px 1px 1px;padding:2px;
+}
+#prods .lowest,#prods  .stage,#reqs .amount,#reqs .limit,#reqs .rate{
+	color:#ff8500;font-weight:bold;font-family:'宋体';
+}
+#prods .expla{
+	color:#006cff;border-bottom:1px dashed #ccc;
+}
+#reqs .pic img{
+	border:1px solid #d9d9d9;padding:5px;
+}
+#reqs .purpose{
+	float:left;font-weight:bold;margin:0 15px;display:inline;
+}
+#reqs .pgbar{
+	position:relative;
+}
+#reqs .progress{
+	position:absolute;left:5px;font-weight:bold;
+}
+
+#latest-loan,#announcement,#tools{
+	border:1px solid #dddddd;
+	background: #fff;
+	position:relative;
+}
+#announcement,#tools{
+	margin-top:10px;
+}
+.sidebox-shadow{
+	background: url(../images/portal/sd-sidebox.png) no-repeat top center;
+	width: 340px;
+	height: 22px;
+}
+#latest-loan .title,#announcement .title,#tools .title{
+	border-bottom: 1px solid #e5ebee;
+	color: #1F2D39;
+	font-size: 16px;
+	height: 26px;
+	padding-top: 12px;
+	background:#f1f7fc;
+	text-indent:15px;
+}
+#latest-loan .list,#announcement .list{
+	margin:11px 10px 10px;
+}
+#latest-loan li,#announcement li{
+	height:30px;line-height:30px;overflow:hidden;text-indent:12px;color:#666;
+}
+#latest-loan a,#announcement a{
+	color:#000;font-size:13px;
+}
+#latest-loan a:hover,#announcement a:hover{
+	color:#b11c11;
+}
+#latest-loan a.more,#announcement a.more{
+	color:#3379C0;position:absolute;top:12px;right:25px;
+}
+#latest-loan a.more:hover,#announcement a.more:hover{
+	color:#ff9a37;
+}
+
+#tools li{
+	height:45px;padding:11px 0 0 80px;
+}
+#tools a{
+	font-size:14px;color:#000;font-weight:bold;
+}
+#t1{
+	background:url(../images/portal/t1.gif) no-repeat 30px 15px;
+}
+#t2{
+	background:url(../images/portal/t2.gif) no-repeat 30px 15px;
+}
+#tools p{
+	margin-top:3px;
+}
+
+.mgn-l5{
+	margin-left:10px;
+}
+.mgn-l15{
+	margin-left:15px;
+}
+/**
+ * customize jQuery UI
+ */
+#reqs .ui-widget{
+	float:left;width:100px;height:16px;border:1px solid #717171;
+}
+#reqs .ui-progressbar-value{
+	background:#49b545;
+}
+
+/**
+ * customize nivo-slider
+ */
+.theme-light.slider-wrapper{
+	padding:0;position:relative;
+}
+.theme-light .nivoSlider{
+	margin:0;
+}
+.theme-light .nivo-controlNav{
+	position:absolute;bottom:0;right:0;padding:5px 25px;
+}
+.theme-light .nivo-controlNav a{
+	margin:0 5px;
+}

@@ -1,0 +1,425 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>汇融易</title>
+		<meta name="keywords" content="汇融易,借款,放贷" />
+		<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--[if IE]><script src="js/html5.js" type="text/javascript"></script><![endif]-->
+	</head>
+	<body class="demo">
+		<div id="wrapper">
+			<header id="header">
+				<hgroup id="site">
+					<h1 id="site-title"><a href="index.html"><span>汇融易</span></a></h1>
+					<h2 id="site-description">全国首家只需经营流水即可借贷的投融资服务平台</h2>
+        </hgroup>
+        <div id="hotline">
+        	<h3>客服热线</h3>
+        	<span>400-628-6928</span>
+        </div>
+        <div id="welcome">
+        	您好，请&nbsp;<a href="#">登录</a>&nbsp;&nbsp;<a href="#">免费注册</a>
+        </div>
+        <div id="location">
+        	<select><option>广州市</option></select>
+        </div>
+			</header>
+			<nav id="menu">
+				<ul>
+					<li class="cur"><a href="index.html">首&nbsp;&nbsp;页</a></li>
+					<li><a href="#">我要借款</a></li>
+					<li><a href="#">我要放贷</a></li>
+					<li><a href="#">帮&nbsp;&nbsp;助</a></li>
+					<li><a href="#">关于我们</a></li>
+				</ul>
+			</nav>
+			<div id="main" class="clearfix">
+				<div id="content">
+					<div id="ads" style="visibility:hidden;">
+						<a href="#"><img src="images/ads/1.jpg" width="695" height="235" alt="" /></a>
+						<a href="#"><img src="images/ads/2.jpg" width="695" height="235" alt="" /></a>
+						<a href="#"><img src="images/ads/3.jpg" width="695" height="235" alt="" /></a>
+					</div>
+					<div id="hot">
+						<ul class="tab">
+							<li for="products" class="cur">热门借贷产品</li>
+							<li for="requests">最新借款申请</li>
+						</ul>
+						<div id="products">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<thead>
+									<tr>
+										<td colspan="6" class="search">
+											<label>借款金额：</label><input type="text" class="input-text" placeholder="(万元)"/>
+											<label>借款周期：</label><input type="text" class="input-text" placeholder="(个月)"/>
+											<label>借款利率：</label><select><option>-请选择-</option><option>5%</option><option>6%</option><option>7%</option></select>
+											<label>借款地区：</label><select><option>-请选择-</option><option>广州</option><option>上海</option><option>深圳</option></select>
+											<button class="search-btn">搜索</button>
+										</td>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr><td colspan="6" class="more"><a href="#">&gt;&gt;&nbsp;更多产品...</a></td></tr>
+								</tfoot>
+								<tbody>
+									<tr class="odd">
+										<td class="pdt-logo"><img src="images/hot/p1.jpg"/></td>
+										<td><strong>邮政储蓄银行</strong><br/><span>个人小额贷款</span></td>
+										<td><strong>0.96万</strong>/10万</td>
+										<td><a href="#">说明</a></td>
+										<td>9134元/月</td>
+										<td><button>我要借款</button></td>
+									</tr>
+									<tr class="even">
+										<td class="pdt-logo"><img src="images/hot/p2.jpg"/></td>
+										<td><strong>平安金融/信...</strong><br/><span>私营业主贷</span></td>
+										<td><strong>2.57万</strong>/10万</td>
+										<td><a href="#">说明</a></td>
+										<td>10479元/月</td>
+										<td><button>我要借款</button></td>
+									</tr>
+									<tr class="odd">
+										<td class="pdt-logo"><img src="images/hot/p3.jpg"/></td>
+										<td><strong>宜信</strong><br/><span>企业无抵押助业...</span></td>
+										<td><strong>3.04万</strong>/10万</td>
+										<td><a href="#">说明</a></td>
+										<td>10863元/月</td>
+										<td><button>我要借款</button></td>
+									</tr>
+									<tr class="even">
+										<td class="pdt-logo"><img src="images/hot/p1.jpg"/></td>
+										<td><strong>邮政储蓄银行</strong><br/><span>综合消费贷款</span></td>
+										<td><strong>0.39万</strong>/10万</td>
+										<td><a href="#">说明</a></td>
+										<td>8662元/月</td>
+										<td><button>我要借款</button></td>
+									</tr>
+									<tr class="odd">
+										<td class="pdt-logo"><img src="images/hot/p1.jpg"/></td>
+										<td><strong>邮政储蓄银行</strong><br/><span>个人小额贷款</span></td>
+										<td><strong>0.96万</strong>/10万</td>
+										<td><a href="#">说明</a></td>
+										<td>9134元/月</td>
+										<td><button>我要借款</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="requests" style="display:none;">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<thead>
+									<tr>
+										<td colspan="3" class="search">
+											<label>借款金额：</label><input type="text" class="input-text" placeholder="(万元)"/>
+											<label>借款周期：</label><input type="text" class="input-text" placeholder="(个月)"/>
+											<label>借款利率：</label><select><option>-请选择-</option><option>5%</option><option>6%</option><option>7%</option></select>
+											<label>借款地区：</label><select><option>-请选择-</option><option>广州</option><option>上海</option><option>深圳</option></select>
+											<button class="search-btn">搜索</button>
+										</td>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr><td colspan="3" class="more"><a href="#">&gt;&gt;&nbsp;更多申请...</a></td></tr>
+								</tfoot>
+								<tbody>
+									<tr class="odd">
+										<td class="req-logo"><img src="images/hot/r1.jpg"/></td>
+										<td>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" id="req-table">
+												<tr>
+													<td colspan="3" class="req-purpose">扩大经营，资金周转</td>
+												</tr>
+												<tr>
+													<td height="30">年利率</td>
+													<td>借款金额：<span class="req-amount">3,000</span>元</td>
+													<td>借款期限：<span class="req-timelimit">2</span>个月</td>
+												</tr>
+												<tr>
+													<td class="req-rate">10%</td>
+													<td class="customize-ui clearfix"><div class="pv63"></div><em>63%</em></td>
+													<td>剩余时间：<span class="req-rest">11天4小3分</span></td>
+												</tr>
+											</table>
+										</td>
+										<td><button>我要放贷</button></td>
+									</tr>
+									<tr class="even">
+										<td class="req-logo"><img src="images/hot/r1.jpg"/></td>
+										<td>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" id="req-table">
+												<tr>
+													<td colspan="3" class="req-purpose">信誉好，生意周转</td>
+												</tr>
+												<tr>
+													<td height="30">年利率</td>
+													<td>借款金额：<span class="req-amount">10,000</span>元</td>
+													<td>借款期限：<span class="req-timelimit">3</span>个月</td>
+												</tr>
+												<tr>
+													<td class="req-rate">11%</td>
+													<td class="customize-ui clearfix"><div class="pv71"></div><em>71%</em></td>
+													<td>剩余时间：<span class="req-rest">5天3小54分</span></td>
+												</tr>
+											</table>
+										</td>
+										<td><button>我要放贷</button></td>
+									</tr>
+									<tr class="odd">
+										<td class="req-logo"><img src="images/hot/r2.jpg"/></td>
+										<td>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" id="req-table">
+												<tr>
+													<td colspan="3" class="req-purpose">装修周转</td>
+												</tr>
+												<tr>
+													<td height="30">年利率</td>
+													<td>借款金额：<span class="req-amount">4,000</span>元</td>
+													<td>借款期限：<span class="req-timelimit">3</span>个月</td>
+												</tr>
+												<tr>
+													<td class="req-rate">10%</td>
+													<td class="customize-ui clearfix"><div class="pv48"></div><em>48%</em></td>
+													<td>剩余时间：<span class="req-rest">11天4小5分</span></td>
+												</tr>
+											</table>
+										</td>
+										<td><button>我要放贷</button></td>
+									</tr>
+									<tr class="even">
+										<td class="req-logo"><img src="images/hot/r2.jpg"/></td>
+										<td>
+											<table width="100%" border="0" cellspacing="0" cellpadding="0" id="req-table">
+												<tr>
+													<td colspan="3" class="req-purpose">创业贷款，经营五金建材生意，保证及时还款</td>
+												</tr>
+												<tr>
+													<td height="30">年利率</td>
+													<td>借款金额：<span class="req-amount">20,000</span>元</td>
+													<td>借款期限：<span class="req-timelimit">6</span>个月</td>
+												</tr>
+												<tr>
+													<td class="req-rate">11%</td>
+													<td class="customize-ui clearfix"><div class="pv84"></div><em>84%</em></td>
+													<td>剩余时间：<span class="req-rest">1天3小45分</span></td>
+												</tr>
+											</table>
+										</td>
+										<td><button>我要放贷</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<aside id="sidebar">
+					<aside id="actual-loan">
+						<h3 class="title">借贷实况</h3>
+						<div id="al-list">
+							<ul id="mar1">
+								<li><a href="#">&#149;&nbsp;工商银行受理**美容店 100万 借款申请</a></li>
+								<li><a href="#">&#149;&nbsp;九**服装店最新递交 20万 借款申请</a></li>
+								<li><a href="#">&#149;&nbsp;人人贷审核通过**服装店 30万 借款</a></li>
+								<li><a href="#">&#149;&nbsp;松**电器最新提交 15万 借款申请</a></li>
+								<li><a href="#">&#149;&nbsp;广州银行审核通过***西餐厅 10万 借款</a></li>
+								<li><a href="#">&#149;&nbsp;旺**皮鞋批发最新提交 5万 借款申请</a></li>
+							</ul>
+							<ul id="mar2"></ul>
+						</div>
+					</aside>
+					<aside id="login-area">
+						<ul class="tab">
+							<li for="merchant" class="merchant current">商户登录</li>
+							<li for="organ" class="organ">机构登录</li>
+						</ul>
+						<div id="merchant">
+							<div class="row">
+								<label>用户名：</label><input type="text" class="text" value="LunaSay"/>
+							</div>
+							<div class="row">
+								<label>登录密码：</label><input type="password" class="text" value="abc123"/>
+							</div>
+							<div class="row">
+								<label>验证码：</label><input type="text" class="captcha" value="kbpsh"/>&nbsp;<img src="images/captcha.gif"/>&nbsp;<a href="#" style="color:#666;">换一张</a>
+							</div>
+							<div class="op-row">
+								<span style="color:#666;">还未加入汇融易？</span><a href="#" class="register" style="text-decoration:underline;">立刻注册</a>
+							</div>
+							<div class="op-row">
+								<button class="submit" onclick="location.href='main4merchant.html';">登&nbsp;&nbsp;录</button>
+							</div>
+						</div>
+						<div id="organ" style="display:none;">
+							<div class="row" style="text-align:center;">
+								<input type="radio" name="idtype" />U-KEY认证登录&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="idtype" />手机认证登录
+							</div>
+							<div class="row">
+								<label>用户名：</label><input type="text" class="text"/>
+							</div>
+							<div class="row">
+								<label>登录密码：</label><input type="password" class="text"/>
+							</div>
+							<div class="row">
+								<label>USB-KEY密码：</label><input type="password" class="text"/>
+							</div>
+							<div class="row">
+								<label>验证码：</label><input type="text" class="captcha"/>&nbsp;<img src="images/captcha.gif"/>&nbsp;<a href="#" style="color:#666;">换一张</a>
+							</div>
+							<div class="op-row">
+								<span style="color:#666;">还未加入汇融易？</span><a href="#" class="register" style="text-decoration:underline;">立刻注册</a>
+							</div>
+							<div class="op-row">
+								<button class="submit">登&nbsp;&nbsp;录</button>
+							</div>
+						</div>
+					</aside>
+					<aside id="announcement">
+						<h3 class="title">公告</h3>
+						<ul id="am-list">
+							<li><a href="#">&#149;&nbsp;中国人民银行关于借款规定2012</a></li>
+							<li><a href="#">&#149;&nbsp;从事放贷业务公司守则</a></li>
+							<li><a href="#">&#149;&nbsp;中国人民银行金融法</a></li>
+							<li><a href="#">&#149;&nbsp;中国人民银行关于借款规定2012</a></li>
+							<li><a href="#">&#149;&nbsp;从事放贷业务公司守则</a></li>
+							<li><a href="#">&#149;&nbsp;中国人民银行金融法</a></li>
+							<li><a href="#">&#149;&nbsp;中国人民银行关于借款规定2012</a></li>
+						</ul>
+					</aside>
+					<aside id="tools">
+						<h3 class="title">贷款工具</h3>
+						<a href="#" id="t1">贷款计算器</a><a href="#" id="t2">借款评估</a>
+					</aside>
+				</aside>
+				<div class="clear"></div>
+				<div id="cooperative-bank">
+					<h3 class="title">合作银行</h3>
+					<ul class="clearfix">
+						<li><img src="images/logo/icbc.gif" width="125" height="40" alt=""/></li>
+						<li><img src="images/logo/abchina.png" width="125" height="40" alt=""/></li>
+						<li><img src="images/logo/boc.gif" width="125" height="40" alt=""/></li>
+						<li><img src="images/logo/ccb.gif" width="125" height="40" alt=""/></li>
+						<li><img src="images/logo/psbc.gif" width="125" height="40" alt=""/></li>
+						<li><img src="images/logo/njcb.gif" width="125" height="40" alt=""/></li>
+						<li><img src="images/logo/nbcb.gif" width="125" height="40" alt=""/></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer">
+				<p>
+					<a href="about.html">关于汇融易</a>
+					<span class="sep">|</span>
+					<a href="contact.html">联系我们</a>
+					<span class="sep">|</span>
+					<a href="enter.html">信贷结构入驻</a>
+					<span class="sep">|</span>
+					<a href="cooperation.html">市场合作</a>
+					<span class="sep">|</span>
+					<a href="disclaimer.html">免责声明</a>
+					<span class="sep">|</span>
+					<a href="advice.html">建议与投诉</a>
+					<span class="sep">|</span>
+					<a href="sitemap.html">网站地图</a>
+				</p>
+				<p>
+					Copyright&nbsp;©&nbsp;2013&nbsp;&nbsp;<a href="index.html">汇融易</a>&nbsp;&nbsp;All Rights Reserved
+				</p>
+			</footer>
+			<script src="js/jquery-min.js" type="text/javascript"></script>
+			<script src="js/jquery-ui-min.js" type="text/javascript"></script>
+			<script src="js/jquery.KinSlideshow.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(function(){
+					$("#menu li").hover(function(){
+						if($(this).hasClass("cur")){
+							return;
+						}
+						$(this).addClass("hover");
+					},function(){
+						$(this).removeClass("hover");
+					});
+					$("#ads").KinSlideshow({
+						isHasTitleBar:false,
+						isHasTitleFont:false,
+						intervalTime:5,
+						mouseEvent:"mouseover"
+					});
+					$("#hot .tab li").click(function(){
+						if($(this).attr("class") === "cur"){
+							return;
+						}
+						var showID = $(this).attr("for");
+						$("#products,#requests").hide();
+						$(this).addClass("cur").siblings().removeClass("cur");
+						$("#"+showID).show();
+					});
+					doPlaceholder();
+					$("button").button();
+					$(".pv63").progressbar({value:63});
+					$(".pv71").progressbar({value:71});
+					$(".pv48").progressbar({value:48});
+					$(".pv84").progressbar({value:84});
+					$("#login-area .tab li").click(function(){
+						if($(this).attr("class") === "current"){
+							return;
+						}
+						var showID = $(this).attr("for");
+						$("#merchant,#organ").hide();
+						$(this).addClass("current").siblings().removeClass("current");
+						$("#"+showID).show();
+					});
+					doMarquee();
+				});
+				function doMarquee(){
+					if($("#al-list li").length < 6){
+						return;
+					}
+					var speed = 100;
+					var mar = document.getElementById("al-list");
+					var mar1 =document.getElementById("mar1");
+					var mar2 = document.getElementById("mar2");
+					mar2.innerHTML = mar1.innerHTML;
+					function Marquee(){
+						if(mar.scrollTop < mar2.offsetHeight){
+							mar.scrollTop++;
+						}else{
+							mar.scrollTop -= mar1.offsetHeight;
+						}
+					}
+					var theMar = setInterval(Marquee,speed);
+					mar.onmouseover = function(){clearInterval(theMar);}
+					mar.onmouseout = function(){theMar = setInterval(Marquee,speed);}
+				}
+				function doPlaceholder(){
+					var input=document.createElement("input");
+					var htmlSupport="placeholder" in input;
+					input=null;
+					if(!htmlSupport){
+						$('[placeholder]').focus(function(){
+							var input = $(this);
+							if (input.val() == input.attr('placeholder')){
+								input.val('');
+								input.removeClass('placeholder');
+							}
+						}).blur(function(){
+							var input = $(this);
+							if(input.val() == '' || input.val() == input.attr('placeholder')){
+								input.addClass('placeholder');
+								input.val(input.attr('placeholder'));
+							}
+						}).blur();
+						$('[placeholder]').parents('form').submit(function(){
+							$(this).find('[placeholder]').each(function(){
+								var input = $(this);
+								if(input.val() == input.attr('placeholder')){
+									input.val('');
+								}
+							})
+						});
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>

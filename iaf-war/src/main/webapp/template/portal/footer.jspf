@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<footer id="footer" class="clearfix">
+	<div class="left">
+		<h3>平台建设机构</h3>
+		<div id="platform"><span>汇卡商务</span></div>
+		<!-- <div id="platform"><span>中国银联&nbsp;汇卡商务</span></div> -->
+	</div>
+	<div class="right">
+		<a href="/about/about.jsp">关于我们</a><span class="sep">|</span>
+		<a href="/about/aboutContact.jsp">联系我们</a><span class="sep">|</span>
+		<a href="/about/aboutJoin.jsp">加入我们</a><span class="sep">|</span>
+		<a href="/help/index.jsp">帮助中心</a> <span class="sep">|</span>
+		<a href="/about/aboutPartner.jsp">合作伙伴</a><br/>
+		Copyright&nbsp;©&nbsp;2013-2015&nbsp;&nbsp;广东汇卡商务服务有限公司&nbsp;&nbsp;版权所有&nbsp;&nbsp;All Rights Reserved.<br/>
+		<a href="http://www.uniondai.com" id="self">汇融易 - 银联特约商户投融资平台</a><br/>
+		粤ICP备&nbsp;&nbsp;11093203号-4
+	</div>
+</footer>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>汇融易 - 机构管理后台</title>
+<meta name="keywords" content="汇融易,借款,放贷,经营流水,汇卡商务" />
+<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+<link rel="stylesheet" type="text/css" href="../resources/css/mp-workframe.css"/>
+<style type="text/css">
+	.data-table table td{
+		border-style:solid;border-color:#ccc;border-width:0 1px 1px 0;
+	}
+	.pager{
+		padding:15px 45px;text-align:right;
+	}
+	.pager a{
+		display:inline-block;padding:2px 5px;border:1px solid #d1d1d1;color:#4a4a4a;
+	}
+	.pager a.cur,.pager a:hover{
+		background:#0157ad;color:#fff;
+	}
+	.dark-btn{
+		vertical-align:middle;
+	}
+	.report .label-center{
+		text-align:center;background:#f3f9fd;font-weight:bold;width:120px;
+	}
+</style>
+</head>
+
+<body>
+<div id="workframe-wrapper" class="clearfix">
+  <div id="content" class="report">
+    <p style="line-height:28px;text-indent:2em;">支付成功！</p>
+    <p style="line-height:28px;text-indent:2em;">如若转账给汇融易，请打印下列放款凭证单，并盖章后传真给广东汇卡公司核实对账！</p>
+    <div style="padding:10px 30px;">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table">
+	    	<tr>
+	    		<td class="label-center">借贷信息</td>
+	    		<td class="data" colspan="2" style="padding:0;border:0;">
+	    			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table" style="border:0;">
+	    				<tr>
+	    					<td class="label">借贷编号</td>
+	    					<td class="data">000000001</td>
+	    				</tr>
+	    				<tr>
+	    					<td class="label">借款商户</td>
+	    					<td class="data">七匹狼服装</td>
+	    				</tr>
+	    				<tr>
+	    					<td class="label">放款机构</td>
+	    					<td class="data">人人贷公司</td>
+	    				</tr>
+	    			</table>
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label-center" rowspan="3">收款人信息</td>
+	    		<td class="label">收款人</td>
+	    		<td class="data">人人贷公司</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label">收款人卡号</td>
+	    		<td class="data">95588123456789</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label">收款人开户行</td>
+	    		<td class="data">中国工商银行广州支行</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label-center" rowspan="4">付款人信息</td>
+	    		<td class="label">付款人</td>
+	    		<td class="data"><input type="text" value="李四"/></td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label">付款人卡号</td>
+	    		<td class="data"><input type="text" value="95588987654321"/></td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label">付款人开户行</td>
+	    		<td class="data">中国农业银行广州第二支行</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label">转账金额</td>
+	    		<td class="data">￥100,000 元</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label-center" rowspan="2">汇款信息</td>
+	    		<td class="label">支付日期</td>
+	    		<td class="data">2013年1月15日</td>
+	    	</tr>
+	    	<tr>
+	    		<td class="label">备注</td>
+	    		<td class="data" style="padding:5px;">线下把放款转账给广东汇卡监管账号</td>
+	    	</tr>
+	    </table>
+	    <div class="uop">
+	    	<a href="javascript:closeDialog();" class="dark-btn">确&nbsp;定</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="dark-btn">打印转账单</a>
+	    	</div>
+    </div>
+  </div>
+</div>
+<script src="../resources/js/jquery-min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+			$(function(){
+				$(".data-list tr:even").addClass("even");
+				$(".data-list tr").hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+				$(".dark-btn").hover(function(){
+					$(this).addClass("dark-btn-hover");
+				},function(){
+					$(this).removeClass("dark-btn-hover");
+				});
+			});
+			function closeDialog(){
+				var id = $("body").attr("id");
+				parent.document.getElementById("workframe").src = "loans-processing.html";
+				//parent.openDialog("汇融易转账确认页面","iaf-transfer-confirm.html",650,500);
+				parent.closeDialog(id);
+			}
+		</script> 
+<!--[if IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+</body>
+</html>

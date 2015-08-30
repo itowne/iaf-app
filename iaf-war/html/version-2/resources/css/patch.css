@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+/* Lizy4ever@2013 */
+
+@media screen,projection{
+	* html #wrapper,* html #footer{
+		width:1400px;width:expression((document.documentElement && document.documentElement.clientHeight)?((document.documentElement.clientWidth < 1000)?"1000px":((document.documentElement.clientWidth>1400)?"1400px":"auto")):((document.body.clientWidth < 1000)?"1000px":((document.body.clientWidth>1400)?"1400px":"auto")));
+	}
+	#sidebar,#footer .copyright,#footer .links{
+		display:inline;
+	}
+	#menu .title{
+		height:22px;padding-top:9px;
+	}
+	#menu .top-href{
+		height:21px;padding-top:8px;
+	}
+	#menu .sub a{
+		height:16px;padding:12px 10px 0 50px;
+	}
+	#tools a{
+		height:18px;padding-top:36px;
+	}
+}

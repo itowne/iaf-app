@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>汇融易 - 机构管理后台</title>
+<meta name="keywords" content="汇融易,借款,放贷,经营流水,汇卡商务" />
+<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+<link rel="stylesheet" type="text/css" href="../resources/css/mp-workframe.css"/>
+<style type="text"/css">
+	#content .data-table td.data{
+		padding:5px;
+	}
+</style>
+</head>
+<body>
+<div id="workframe-wrapper" class="clearfix">
+  <div id="location">
+    <p>当前位置：我的资料 >> 资料管理</p>
+  </div>
+  <div id="content">
+    <h3 class="title"><span>机构基本资料</span></h3>
+    <div class="search-bar">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table">
+      	<tr>
+      		<td class="label" width="180">机构名称</td>
+      		<td class="data" width="230">中国工商银行广州支行</td>
+      		<td class="label">融资性机构经营许可证</td>
+      		<td class="data">A123456</td>
+      	</tr>
+      	<tr>
+      		<td class="label">注册时间</td>
+      		<td class="data">2001年1月1日</td>
+      		<td class="label">注册资金</td>
+      		<td class="data">5000万</td>
+      	</tr>
+      	<tr>
+      		<td class="label">注册地址</td>
+      		<td class="data">广东广州天河区</td>
+      		<td class="label">机构代码证</td>
+      		<td class="data">abcedef</td>
+      	</tr>
+      	<tr>
+      		<td class="label">营业执照号</td>
+      		<td class="data">A12345678</td>
+      		<td class="label">税务登记号</td>
+      		<td class="data">A12345678</td>
+      	</tr>
+      	<tr>
+      		<td class="label">法人代表姓名</td>
+      		<td class="data">李四</td>
+      		<td class="label">身份证号码</td>
+      		<td class="data">440123456789123456</td>
+      	</tr>
+      	<tr>
+      		<td class="label">开业时间</td>
+      		<td class="data">2001年1月2日</td>
+      		<td class="label">机构性质</td>
+      		<td class="data">银行</td>
+      	</tr>
+      	<tr>
+      		<td class="label">联系人</td>
+      		<td class="data">张三</td>
+      		<td class="label">联系电话</td>
+      		<td class="data">8888 9999</td>
+      	</tr>
+      	<tr>
+      		<td class="label">联系地址</td>
+      		<td class="data" colspan="3">中国广东省广州市东风中路123号</td>
+      	</tr>
+      </table>
+    </div>
+    <h3 class="title"><span>业务资料</span></h3>
+    <div class="search-bar">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table">
+      	<tr>
+      		<td class="label" width="180">受理业务地区范围</td>
+      		<td class="data" width="230">广东省</td>
+      		<td class="label">放贷专用银行卡账号</td>
+      		<td class="data">95588123456789333</td>
+      	</tr>
+      	<tr>
+      		<td class="label">专用账号开户行</td>
+      		<td class="data">中国工商银行广州支行</td>
+      		<td class="label">放贷持卡人姓名</td>
+      		<td class="data">赵武</td>
+      	</tr>
+      	<tr>
+      		<td class="label">还贷银行卡账号</td>
+      		<td class="data">95588123456789333</td>
+      		<td class="label">还贷银行开户行</td>
+      		<td class="data">中国工商银行广州支行</td>
+      	</tr>
+      	<tr>
+      		<td class="label">还贷持卡人姓名</td>
+      		<td class="data" colspan="3">赵武</td>
+      	</tr>
+      </table>
+    </div>
+    <h3 class="title"><span>其它资料</span></h3>
+    <div class="search-bar" style="padding:10px 10px 30px;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table">
+      	<tr>
+      		<td class="label" width="180">其它补充资料<br/><a href="javascript:void(0);">上传补充资料</a></td>
+      		<td class="data" style="text-align:center;"><img src="../resources/images/mp/my-info-1.jpg"/>&nbsp;&nbsp;<img src="../resources/images/mp/my-info-2.jpg"/></td>
+      	</tr>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="../resources/js/jquery-min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+			$(function(){
+				$(".data-list tr:even").addClass("even");
+				$(".data-list tr").hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+				$(".dark-btn").hover(function(){
+					$(this).addClass("dark-btn-hover");
+				},function(){
+					$(this).removeClass("dark-btn-hover");
+				});
+			});
+			function newReq(){
+				
+			}
+		</script> 
+<!--[if IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+</body>
+</html>

@@ -1,0 +1,304 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>汇融易 - 商户管理后台</title>
+		<meta name="keywords" content="汇融易,借款,放贷" />
+		<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="css/patch.css"/><![endif]-->
+		<!--[if IE]><script src="js/html5.js" type="text/javascript"></script><![endif]-->
+	</head>
+	<body class="demo">
+		<div id="wrapper">
+			<header id="header">
+				<hgroup id="site" class="clearfix">
+					<h1 id="site-title"><a href="index.html"><span>汇融易</span></a></h1>
+					<h2 id="site-description"><span>全国首家只需经营流水即可借贷的投融资服务平台</span></h2>
+        </hgroup>
+        <div id="guide">
+        	<ul class="clearfix">
+        		<li id="g-home"><a href="index.html">网站首页</a></li>
+        		<li id="g-about"><a href="#">关于我们</a></li>
+        		<li id="g-help"><a href="#">帮&nbsp;助</a></li>
+        		<li id="g-logout"><a href="index.html">退&nbsp;出</a></li>
+        	</ul>
+        </div>
+			</header>
+			<div id="main" class="clearfix">
+				<aside id="sidebar">
+					<h3 class="title">商户管理菜单</h3>
+					<ul id="menu">
+						<li><a href="main4merchant.html" class="action">我的首页</a></li>
+						<li>
+							<span class="action unfolded">我要借款</span>
+							<ul class="sub" style="display:block;">
+								<li><a href="product-req.html" class="cur">产品申请</a></li>
+								<li><a href="bidding-req.html">竞投申请</a></li>
+							</ul>
+						</li>
+						<li><a href="my-req.html" class="action">我的申请</a></li>
+						<li><a href="repayment.html" class="action">我要还款</a></li>
+						<li>
+							<span class="action">我的信用</span>
+							<ul class="sub">
+								<li><a href="#">信用报告管理</a></li>
+								<li><a href="#">收入记录</a></li>
+								<li><a href="#">采购记录</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="action">我的关注</span>
+							<ul class="sub">
+								<li><a href="#">贷款产品</a></li>
+								<li><a href="#">贷款结构</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="action">我的资料</span>
+							<ul class="sub">
+								<li><a href="#">信用报告管理</a></li>
+								<li><a href="#">修改密码</a></li>
+							</ul>
+						</li>
+						<li><a href="#" class="action">操作日志</a></li>
+						<li>
+							<span class="fixed">贷款工具</span>
+							<ul class="sub" style="display:block;">
+								<li><a href="#">贷款计算器</a></li>
+								<li><a href="#">借款评估</a></li>
+							</ul>
+						</li>
+					</ul>
+				</aside>
+				<div id="content" class="clearfix" style="padding:0;">
+					<div id="location">
+						<label>当前位置：</label><span>我要借款</span><em class="next"></em><span>产品申请</span>
+					</div>
+					<div id="p-search">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<table width="100%" border="0" cellspacing="0" cellpadding="0" class="data-table">
+										<tr>
+											<td class="label">产品名称：</td>
+											<td><input type="text"/></td>
+											<td class="label">放贷机构：</td>
+											<td><select><option>请选择放贷结构</option><option>工商银行</option><option>农业银行</option><option>人人贷</option></select></td>
+											<td class="label">产品年利率：</td>
+											<td><input type="text"/>&nbsp;%</td>
+										</tr>
+										<tr>
+											<td class="label">产品金额：</td>
+											<td><input type="text"/>&nbsp;(万元)</td>
+											<td class="label">产品周期：</td>
+											<td><input type="text"/>&nbsp;(个月)</td>
+											<td class="label">受理地区：</td>
+											<td><select><option>请选择受理地区</option><option>北京</option><option>上海</option></select></td>
+										</tr>
+									</table>
+								</td>
+								<td width="80" style="text-align:center;">
+									<button>查&nbsp;&nbsp;询</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div id="results">
+						<div class="info">查询结果：共有<font style="color:red;">10个</font>借贷产品。</div>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" id="list" class="data-table">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>产品名称</th>
+									<th>放贷机构</th>
+									<th>受理地区</th>
+									<th>贷款最小金额</th>
+									<th>贷款最大金额</th>
+									<th>贷款最小周期</th>
+									<th>贷款最长周期</th>
+									<th>年利率</th>
+									<th>放贷周期</th>
+									<th>申请情况</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td><a href="#">红棉贷</a></td>
+									<td><a href="#">工商银行</a></td>
+									<td>北京</td>
+									<td>1万</td>
+									<td>10万</td>
+									<td>5个月</td>
+									<td>12个月</td>
+									<td>3%</td>
+									<td>3-5天</td>
+									<td>100</td>
+									<td><a href="#">详情</a>&nbsp;&nbsp;<a href="#">在线联系</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pager">
+							<span class="prev">&nbsp;</span>
+							&nbsp;<a href="#">1</a>
+							&nbsp;<a href="#">2</a>
+							&nbsp;<a href="#">3</a>
+							&nbsp;<a href="#">4</a>
+							&nbsp;<a href="#">5</a>
+							<span class="next">&nbsp;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="footer" class="clearfix">
+			Copyright&nbsp;©&nbsp;2013&nbsp;&nbsp;<a href="index.html">汇融易</a>&nbsp;&nbsp;All Rights Reserved
+		</footer>
+		<script src="js/jquery-min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui-min.js" type="text/javascript"></script>
+		<!--[if  IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+		<script type="text/javascript">
+			$(function(){
+				$("#menu .sub li,#menu .action").hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+				$("#menu span.action").click(function(){
+					$(this).toggleClass("unfolded");
+					$(this).next("ul.sub").slideToggle();
+				});
+				//$("button").button();
+			});
+		</script>
+	</body>
+</html>

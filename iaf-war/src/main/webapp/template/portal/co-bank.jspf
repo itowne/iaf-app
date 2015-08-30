@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<div id="co-bank" style="height:270px">
+	<h3 class="title">合作金融机构</h3>
+	<ul class="clearfix" style="overflow:visible;">
+		<li><img src="${ctx}/resources/images/bank_icon/1.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/2.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/3.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/4.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/5.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/6.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/7.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/8.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/9.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/10.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/11.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/12.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/13.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/14.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/15.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/16.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/17.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/18.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/19.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/20.gif" width="127" height="40" alt=""/></li>
+		<li><img src="${ctx}/resources/images/bank_icon/21.gif" width="127" height="40" alt=""/></li>
+	</ul>
+</div>

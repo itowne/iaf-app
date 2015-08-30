@@ -1,0 +1,330 @@
+﻿@charset "utf-8";
+/* Lizy4ever@2013.03 */
+
+/* login */
+#main.login{
+	margin:30px auto;
+}
+#main.login .tab-title{
+	height:38px;position:relative;bottom:-1px;
+}
+#main.login .tab-title li{
+	float:left;width:178px;height:38px;line-height:38px;background:#fff url(../images/portal/tab-reg.gif) no-repeat -178px 0;margin-right:10px;color:#676767;font-size:16px;font-weight:bold;text-align:center;letter-spacing:2px;
+}
+#main.login .tab-title li a{
+	color:#676767;
+}
+#main.login .tab-title li.cur{
+	background-position:0 0;color:#3379C0;
+}
+#main.login .tab-content{
+	background:#fff;border:1px solid #b2b2b2;
+}
+#loginForm{
+	padding:45px 20px 55px;line-height:46px;background:url(../images/portal/bg-login.gif) no-repeat 580px center;position:relative;min-height:250px;height:auto !important;height:250px;
+}
+#loginForm .form-row{
+	padding:5px;
+}
+#loginForm label{
+	display:inline-block;width:110px;text-align:right;padding-right:10px;color:#343434;font-size:15px;font-weight:bold;
+}
+#loginForm .form-input{
+	width:250px;height:28px;line-height:28px;
+}
+#loginForm label,#loginForm input,#loginForm img{
+	vertical-align:middle;
+}
+#login-btn{
+	display:block;width:148px;height:46px;background:url(../images/portal/bg-login-btn.gif) no-repeat;border:0;margin:15px 0 0 150px;cursor:pointer;
+}
+#join-btn{
+	position:absolute;width:159px;height:43px;right:139px;bottom:36px;
+}
+#join-btn span{
+	display:none;
+}
+#loginForm #loginType{
+	padding:0 0 10px 145px;line-height:26px;
+}
+#loginType input{
+	margin:0;padding:0;
+}
+#loginType label{
+	display:inline;cursor:pointer;font-size:14px;font-weight:normal;text-align:left;padding:0 15px 0 5px;width:auto;
+}
+#loginForm.instLogin label{
+	width:130px;
+}
+
+/* 我要借款 */
+#tips{
+	height:110px;padding:0 10px;background:#fff;border:1px solid #e2e2e2;
+}
+#tips .tip1{
+	color:#7a7a7a;font-size:13px;font-weight:bold;padding:8px 0;text-indent:15px;
+}
+#tips .tip2{
+	color:#8e8e8e;padding-top:5px;text-indent:35px;
+}
+#tips .tip2 a{
+	color:#007fff;text-decoration:underline;
+}
+#tips .steps{
+	height:50px;margin:0 auto;
+}
+.steps li{
+	float:left;
+}
+.steps li span{
+	display:none;
+}
+.steps .reg{
+	display:block;width:225px;height:50px;
+}
+.ask-steps{
+	background:url(../images/portal/bg-ask-steps.gif) no-repeat;
+}
+.offer-steps{
+	background:url(../images/portal/bg-offer-steps.gif) no-repeat;
+}
+#gold-keeper{
+	height:225px;margin-top:10px;
+}
+#about-offer{
+	height:175px;margin-top:10px;
+}
+
+#inner-ad{
+	text-align:center;margin-top:12px;
+}
+
+.main-search label,.search-btn{
+	margin-left:15px;
+}
+
+#prods{
+	width:1000px;margin:10px auto;border:1px solid #DDDDDD;
+}
+#prods .main-search{
+	background:url(../images/portal/bg-main-list.gif) repeat-x 0 -39px;
+}
+
+/*--注册页面--*/
+#main-reg{
+	background:url(../images/portal/bg-main-reg.gif) repeat-x #fff;
+}
+#main-reg .content{
+	width:800px;padding:30px 100px 0;margin:0 auto;
+}
+.tab-reg{
+	height:38px;position:relative;bottom:-2px;
+}
+.tab-reg li{
+	float:left;width:178px;height:38px;line-height:38px;background:url(../images/portal/tab-reg.gif) no-repeat -178px 0 #fff;margin:0 3px;color:#676767;font-size:16px;font-weight:bold;text-align:center;letter-spacing:1px;cursor:pointer;
+}
+.tab-reg li.cur{
+	background-position:0 0;color:#3379C0;
+}
+.tab-reg .gold-keeper{
+	color:red;
+}
+.reg-fields{
+	padding:20px;font-size:13px;line-height:45px;
+}
+.reg-fields label{
+	display:inline-block;width:110px;text-align:right;padding-right:10px;
+}
+.reg-input{
+	width:250px;height:25px;
+}
+#main-reg select{
+	width:120px;height:25px;padding:4px 0;
+}
+#main-reg .red{
+	color:red;
+}
+.reg-uop{
+	padding-left:125px;
+}
+.reg-uop button{
+	height:31px;border:0;background:url(../images/portal/bg-btn.gif) repeat-x;color:#fff;font-size:13px;font-weight:bold;cursor:pointer;
+}
+.reg-uop a{
+	color:#3379c0;font-weight:bold;
+}
+.reg-fields strong{
+	font-size:15px;
+}
+
+/*--帮助页面--*/
+#main-con{
+	float:right;
+	width:715px;
+	padding:0 15px 15px 0;
+	font-size:14px;
+}
+#main-con .title{
+	background:url(../images/portal/title-bg.gif) repeat-x;
+	font-size:16px;
+	font-weight:bold;
+	color:#0d549c;
+	height:34px;
+	line-height:34px;
+	padding-left:20px;
+}
+#main-con .title em{
+	background-color:#f1f1f1;
+	padding:0 8px;
+	height:34px;
+	display:inline-block
+}
+#main-con p{
+	margin:10px 0;
+}
+.help-bg{
+	background:url(../images/portal/help-bg.gif) repeat-y
+}
+#sidenav{
+	float:left;
+	width:243px;
+	font-weight:bold;
+}
+.sidenav-bg{
+	
+	padding-bottom:15px
+}
+.sidenav-bg li{
+	padding:15px 0 0 20px;
+}
+.sidenav-title{
+	background:url(../images/portal/sidenav-title.gif) no-repeat;
+	font-size:16px;
+	display:block;
+	height:30px;
+	color:#0d549c;
+	padding:10px 0 0 30px;
+}
+#sidenav a{
+	background:url(../images/portal/help-tab.gif) no-repeat;
+	padding-left:20px;
+	font-size:14px;
+	color:#666666;
+	height:16px;
+	line-height:16px;
+	display:block
+}
+
+/* 贷款工具 */
+#main.tools .title{
+	height:100px;background:url(../images/portal/bg-tools-title.gif) repeat-x left bottom;
+}
+#tools-t h3,#tools-t  ul,#tools-t  li{
+	float:left;height:100px;
+}
+#tools-t  h3{
+	padding:0 25px;color:#7d7d7d;font-size:24px;line-height:100px;margin-left:25px;
+}
+#tools-t  a{
+	display:inline-block;width:300px;height:73px;margin-top:20px;
+}
+#tools-t  a span{
+	display:none;
+}
+#tools-t  .calculator{
+	background:url(../images/portal/t1t2.png) no-repeat;
+}
+#tools-t  .assessment{
+	background:url(../images/portal/t1t2.png) no-repeat 0 -73px;margin-left:25px;
+}
+#tools-t  li.cur{
+	background:url(../images/portal/bg-tools-arrow.gif) no-repeat center bottom;
+}
+#main.tools .content{
+	padding:10px;background:#fff;
+}
+#tools-b h3{
+	color:#343434;font-size:18px;line-height:42px;padding-left:90px;
+}
+#tools-b p{
+	color:#606060;font-size:14px;line-height:24px;padding-left:90px;
+}
+
+#calculator-table{
+	margin:10px 90px;
+}
+#calculator-table td{
+	padding:3px 5px;line-height:36px;font-size:14px;
+}
+#calculator-table .label{
+	text-align:right;
+}
+#calculator-table .label,#calculator-table em{
+	color:#343434;font-weight:bold;
+}
+#calculator-table .calculator-input{
+	height:24px;line-height:24px;padding:2px 3px;font-size:14px;border:1px solid #999;background:#f5f5f5;vertical-align:middle;
+}
+#plan{
+	margin:0;
+}
+#calculate{
+	width:148px;height:46px;border:0;padding:0;margin:0;background:url(../images/portal/bg-calculator.gif) no-repeat;cursor:pointer;
+}
+
+#main.tools .result{
+	width:978px;padding:10px 10px 15px;margin-top:25px;background:#e9f2f4;border:1px solid #0086ca;display:none;position:relative;
+}
+#arrow{
+	position:absolute;width:19px;height:11px;left:295px;top:-10px;background:url(../images/portal/bg-calculator-result.gif) no-repeat;
+}
+#calculator-result{
+	width:80%;margin:0 auto;font-size:14px;
+}
+#calculator-result h3{
+	padding:0;font-size:14px;line-height:30px;
+}
+#calculator-result .result-input{
+	color:#ff8400;padding:0 2px;
+}
+#plan-list{
+	display:none;
+}
+#plan-table{
+	width:100%;border-collapse:collapse;margin:15px 0;
+}
+#plan-table th,#plan-list td{
+	padding:0;margin:0;
+}
+#plan-table th{
+	border-bottom:2px solid #4c92d3;line-height:32px;
+}
+#plan-table td{
+	border-bottom:1px solid #9ecae1;line-height:32px;text-align:center;
+}
+
+/*贷款评估*/
+#assess-form{
+	float: left;
+}
+#assess-side{
+	float: right;
+	width: 320px;
+	padding: 0 20px;
+}
+#assess-side h3,#assess-side p{
+	padding: 0;
+}
+#credit-level{
+	background: url(../images/portal/credit-level.png) no-repeat;
+	width: 230px;
+	height: 48px;
+}
+#credit-level2{
+	background: url(../images/portal/credit-level.png) no-repeat 0 -48px;
+	width: 230px;
+	height: 170px;
+}
+#result #msg{
+	text-indent: 1em;
+}

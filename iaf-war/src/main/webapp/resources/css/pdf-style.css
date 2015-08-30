@@ -1,0 +1,184 @@
+﻿@charset "utf-8";
+/* Lizy4ever@2013.03 */
+
+/* Reset.css */
+html,body,div,p,span,h1,h2,h3,em,img,ol,ul,li,form,label,table,caption,thead,tbody,tfoot,tr,th,td
+	{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	font-family: SimSun;
+	font-size: 12px;
+	padding: 20px;
+}
+/**
+ * default HTML elements
+ */
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:active {
+	outline: none;
+}
+
+em {
+	font-style: normal;
+}
+
+.fr {
+	float: right
+}
+
+.cl20 {
+	height: 20px;
+	line-height: 20px;
+	clear: both
+}
+
+.rlt {
+	position: relative
+}
+
+.abs {
+	position: absolute
+}
+
+.tc,.label-tc .label {
+	text-align: center
+}
+
+.label-tr .label {
+	text-align: right
+}
+
+.tl {
+	text-align: left
+}
+
+.data-table {
+	border-style: solid;
+	border-color: #000;
+	border-width: 1px 0 0 1px;
+	margin: 0 auto;
+}
+
+.data-table th,.data-table td {
+	padding: 3px 0;
+	line-height: 32px;
+	border-style: solid;
+	border-color: #000;
+	border-width: 0 1px 1px 0;
+	padding: 0 5px;
+}
+
+.data-table th {
+	background: #FFFE99;
+	color: #FAF4FF;
+	padding: 5px;
+	font-size: 15px
+}
+
+.data-table .label {
+	background: #f3f9fd;
+	color: #606060;
+	font-weight: bold
+}
+
+#Wraper {
+	width: 650px;
+	margin: 0 auto
+}
+
+#Wraper h2,#Wraper h3 {
+	margin: 20px 0
+}
+
+.report {
+	padding: 20px 0
+}
+/*--首页背景--*/
+.CoReport {
+	background: url(../images/CoReportBG.jpg);
+	width: 634px;
+	height: 900px;
+}
+
+.CoReport span {
+	left: 220px;
+	font-size: 14px;
+	font-weight: bold;
+	display: block
+}
+
+.CoReport .name {
+	top: 380px;
+}
+
+.CoReport .num {
+	top: 410px;
+}
+
+.CoReport .rnum {
+	top: 435px;
+}
+
+.CoReport .date {
+	top: 462px;
+}
+
+.RepFirst {
+	height: 680px
+}
+
+.RepFirst p {
+	height: 28px;
+	line-height: 28px;
+	margin: 8px 0
+}
+
+.RepFirst .txt {
+	background: url(../images/tab.gif) no-repeat;
+	padding-left: 45px
+}
+
+.RepFirst .logo {
+	bottom: 30px;
+	right: 30px;
+	background: url(../images/logo.gif) no-repeat;
+	width: 138px;
+	height: 153px;
+}
+
+.report p {
+	line-height: 32px;
+	text-indent: 2em
+}
+
+.report .large {
+	font-size: 18px;
+	font-weight: bold
+}
+
+.report .red {
+	color: #F00;
+	font-weight: bold
+}
+
+.pageNext {
+	page-break-after: auto;
+}
+
+.data {
+	font-weight:bold;
+}
+.dark-btn{
+	display:inline-block;height:28px;line-height:28px;padding:0 10px;background:url(../images/mp/bg-dark-btn.gif) repeat-x;border:0;overflow:hidden;color:#fff;font-size:13px;font-weight:bold;cursor:pointer;
+}

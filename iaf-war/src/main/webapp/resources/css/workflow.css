@@ -1,0 +1,62 @@
+	/****************************************
+ * 流程步骤 相关
+ ****************************************/
+.flowbox {
+  height: 25px;
+  width: 96%;
+  margin: 10px auto 20px;
+}
+.flowbox .num3 li {
+  width: 33.2%;
+}
+.flowbox .num4 li {
+  width: 24.5%;
+}
+.flow {
+  width: auto;
+  height: 25px;
+  margin: 0 auto;
+  padding: 0;
+}
+.flow li {
+  list-style: none outside none;
+  height: 25px;
+  width: 182px;
+  line-height: 23px;
+  background: url(../images/mp/bg_flow.gif) no-repeat;
+  float: left;
+  display: inline-block;
+  color: #2E6E9E;
+  text-align: center;
+  font-size: 13px;
+  overflow: hidden;
+}
+.flow li.page_item {
+  background-position: right -50px;
+}
+.flow li.first {
+  border-radius: 6px 0 0 6px;
+  -webkit-border-radius: 6px 0 0 6px;
+  -moz-border-radius: 6px 0 0 6px;
+  border-left: 1px solid #E96B05;
+}
+.flow li.last {
+  border-radius: 0 6px 6px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  background-position: right -75px;
+  border-right: 1px solid #E96B05;
+}
+.flow li.before_current {
+  background-position: right 0px;
+}
+.flow li.current {
+  background-position: right -25px;
+}
+.flow li.current_last {
+  background-position: right -100px;
+  color: #fff;
+}
+.flow li.current {
+  color: #fff;
+}

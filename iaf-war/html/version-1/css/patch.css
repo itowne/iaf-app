@@ -1,0 +1,6 @@
+﻿@charset "utf-8";
+/* Lizy4ever@2013 */
+
+@media screen,projection{
+	* html #wrapper{width:1400px;width:expression((document.documentElement && document.documentElement.clientHeight)?((document.documentElement.clientWidth < 1000)?"1000px":((document.documentElement.clientWidth>1400)?"1400px":"auto")):((document.body.clientWidth < 1000)?"1000px":((document.body.clientWidth>1400)?"1400px":"auto")))}
+}

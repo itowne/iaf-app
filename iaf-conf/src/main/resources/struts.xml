@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.convention.action.suffix" value="Action" />
+	<constant name="struts.convention.action.mapAllMatches" value="true" />
+	<constant name="struts.convention.result.path" value="/secure" />
+	<constant name="struts.convention.action.disableJarScanning" value="false" />
+	<constant name="struts.convention.default.parent.package" value="struts" />
+	<constant name="struts.convention.package.locators" value="action" />
+	<constant name="struts.convention.action.fileProtocols" value="jar,zip" />
+	<constant name="struts.multipart.maxSize" value="10701096" /> 
+	<constant name="struts.ui.templateDir" value="iafTemplate" />
+	<constant name="struts.ui.theme" value="jqueryui" />
+	<constant name="struts.multipart.saveDir " value="/tmp" />
+	<constant name="struts.custom.i18n.resources" value="formatterMessage" />
+	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	<package name="struts" extends="struts-default,json-default">
+		<result-types>
+			<result-type name="dispatcher" class="org.apache.struts2.dispatcher.ServletDispatcherResult" />
+			<result-type name="JqgridJsonResult" class="newland.jqgrid.result.JqgridJsonResult"></result-type>
+			<result-type name="fileDownload" class="newland.base.views.result.FileDownResult"></result-type>
+			<result-type name="ReportResult" class="newland.base.views.result.ReportResult"></result-type>
+			<result-type name="WordResult" class="newland.base.views.result.WordResult"></result-type>
+			<result-type name="plainResult" class="newland.base.views.result.PlainResult"></result-type>
+		</result-types>
+
+		<interceptors>
+			<interceptor name="bean-scope"
+				class="com.googlecode.scopeplugin.ScopeInterceptor" />
+			<interceptor-stack name="base_stack">
+				<interceptor-ref name="bean-scope" />
+				<interceptor-ref name="store">
+					<param name="operationMode">AUTOMATIC</param>
+				</interceptor-ref>
+				<interceptor-ref name="exception"/>
+                <interceptor-ref name="i18n"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="params">
+                    <param name="excludeParams">dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,parameters\...*</param>
+                </interceptor-ref>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="chain"/>
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="staticParams"/>
+                <interceptor-ref name="conversionError"/>
+                <interceptor-ref name="validation">
+                    <param name="validateAnnotatedMethodOnly">true</param>
+					<param name="programmatic">false</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow">
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+				
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="base_stack" />
+		<default-action-ref name="homePage"></default-action-ref>
+		<global-results>
+			<result name="queryUid" type="plainResult"><param name="valueName">qquid</param></result>
+		</global-results>
+	</package>
+</struts>

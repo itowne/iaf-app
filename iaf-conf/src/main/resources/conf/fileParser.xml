@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+    http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+    http://www.springframework.org/schema/tx  
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
+	default-lazy-init="false" default-autowire="byName">
+	<bean id="loanOrdPlanFileParser" class="newland.iaf.utils.file.excel.ExcelIteratorFileParser">
+		<property name="title">
+			<value>还款计划表</value>
+		</property>
+		<property name="sheetName">
+			<value>还款计划</value>
+		</property>
+		<property name="rowOffset"><value>4</value></property>
+		<property name="modelClass"><value>newland.iaf.base.model.LoanOrdPlan</value></property>
+		<property name="cellList">
+			<list>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款期数</value></property>
+					<property name="path"><value>period</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款日期(年/月/日)</value></property>
+					<property name="path"><value>refundDate</value></property>
+					<property name="cellFormat"><value>yyyy-MM-dd</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>月还款总额(元)</value></property>
+					<property name="path"><value>repayment</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>月还本金(元)</value></property>
+					<property name="path"><value>capital</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>月还利息(元)</value></property>
+					<property name="path"><value>interest</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>剩余还款金额(元)</value></property>
+					<property name="path"><value>remainAmount</value></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="creditFileParser" class="newland.iaf.utils.file.excel.ExcelIteratorFileParser">
+		<property name="title">
+			<value>放款资金流水表</value>
+		</property>
+		<property name="sheetName">
+			<value>放款资金表</value>
+		</property>
+		<property name="rowOffset"><value>4</value></property>
+		<property name="modelClass"><value>newland.iaf.base.model.CreditExcel</value></property>
+		<property name="cellList">
+			<list>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款流水号</value></property>
+					<property name="path"><value>traceNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>支付订单号</value></property>
+					<property name="path"><value>otherSysTraceNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>贷款订单号</value></property>
+					<property name="path"><value>loanOrdId</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款方汇卡商户号</value></property>
+					<property name="path"><value>merchNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款机构</value></property>
+					<property name="path"><value>instName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款方汇卡商户号</value></property>
+					<property name="path"><value>receiveMerchNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款商户</value></property>
+					<property name="path"><value>receiveMerchName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款金额(元)</value></property>
+					<property name="path"><value>creditQuota</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>交易手续费(元)</value></property>
+					<property name="path"><value>tradeCharge</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>交易金额(元)</value></property>
+					<property name="path"><value>tradeQuota</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款交易日期</value></property>
+					<property name="path"><value>creditDate</value></property>
+					<property name="cellFormat"><value>yyyy-MM-dd</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号</value></property>
+					<property name="path"><value>accountNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号开户姓名</value></property>
+					<property name="path"><value>accountName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号开户行</value></property>
+					<property name="path"><value>acountBankName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号开户银行行号</value></property>
+					<property name="path"><value>accountBankNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>处理状态</value></property>
+					<property name="path"><value>stat</value></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="refundFileParser" class="newland.iaf.utils.file.excel.ExcelIteratorFileParser">
+		<property name="title">
+			<value>收款资金流水表</value>
+		</property>
+		<property name="sheetName">
+			<value>收款资金表</value>
+		</property>
+		<property name="rowOffset"><value>4</value></property>
+		<property name="modelClass"><value>newland.iaf.base.model.RefundExcel</value></property>
+		<property name="cellList">
+			<list>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款流水号</value></property>
+					<property name="path"><value>traceNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>支付订单号</value></property>
+					<property name="path"><value>otherSysTraceNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>贷款订单号</value></property>
+					<property name="path"><value>loanOrdId</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款期号</value></property>
+					<property name="path"><value>periods</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款方汇卡商户号</value></property>
+					<property name="path"><value>merchNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款商户</value></property>
+					<property name="path"><value>merchName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款方汇卡商户号</value></property>
+					<property name="path"><value>receiveMerchNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款机构</value></property>
+					<property name="path"><value>receiveMerchName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款金额</value></property>
+					<property name="path"><value>creditQuota</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>交易手续费(元)</value></property>
+					<property name="path"><value>tradeCharge</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>交易金额(元)</value></property>
+					<property name="path"><value>tradeQuota</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款交易日期</value></property>
+					<property name="path"><value>refundDate</value></property>
+					<property name="cellFormat"><value>yyyy-MM-dd</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号</value></property>
+					<property name="path"><value>accountNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号开户姓名</value></property>
+					<property name="path"><value>accountName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号开户行</value></property>
+					<property name="path"><value>acountBankName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>收款卡(帐)号开户银行行号</value></property>
+					<property name="path"><value>accountBankNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>处理状态</value></property>
+					<property name="path"><value>stat</value></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="onceCreditFileParser" class="newland.iaf.utils.file.excel.ExcelIteratorFileParser">
+		<property name="title">
+			<value>放款资金流水表</value>
+		</property>
+		<property name="sheetName">
+			<value>放款资金表</value>
+		</property>
+		<property name="rowOffset"><value>4</value></property>
+		<property name="modelClass"><value>newland.iaf.base.model.LoanOrd</value></property>
+		<property name="cellList">
+			<list>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款流水号</value></property>
+					<property name="path"><value>traceNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>支付订单号</value></property>
+					<property name="path"><value>loanOrdId</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>贷款订单号</value></property>
+					<property name="path"><value>loanOrdId</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放贷机构</value></property>
+					<property name="path"><value>instName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>贷款商户</value></property>
+					<property name="path"><value>merchName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>贷款金额</value></property>
+					<property name="path"><value>quota</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>贷款期限</value></property>
+					<property name="path"><value>term</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>还款期数</value></property>
+					<property name="path"><value>term</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>利率</value></property>
+					<property name="path"><value>rate</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>放款日期</value></property>
+					<property name="path"><value>creditDate</value></property>
+					<property name="cellFormat"><value>yyyy-MM-dd</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>商户转入账号</value></property>
+					<property name="path"><value>reciveAcctNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>转入账户名称</value></property>
+					<property name="path"><value>reciveAcctName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>转入银行名称</value></property>
+					<property name="path"><value>reiciveBankName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>处理状态</value></property>
+					<property name="path"><value>status/desc</value></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="applyRequestFileParser" class="newland.iaf.utils.file.excel.ExcelIteratorFileParser">
+		<property name="title">
+			<value>冻结请求申请表</value>
+		</property>
+		<property name="sheetName">
+			<value>申请表</value>
+		</property>
+		<property name="rowOffset"><value>4</value></property>
+		<property name="modelClass"><value>newland.iaf.base.model.Freeze</value></property>
+		<property name="cellList">
+			<list>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>借贷编号</value></property>
+					<property name="path"><value>loanOrdId</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>冻结申请机构名称</value></property>
+					<property name="path"><value>instName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>机构汇卡商户号</value></property>
+					<property name="path"><value>instNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>被冻结商户名称</value></property>
+					<property name="path"><value>merchName</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>商户汇卡商户号</value></property>
+					<property name="path"><value>merchNo</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>申请类型</value></property>
+					<property name="path"><value>applyType/desc</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>冻结/解冻金额(元)</value></property>
+					<property name="path"><value>amount</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>冻结/解冻申请日期</value></property>
+					<property name="path"><value>genTime</value></property>
+					<property name="cellFormat"><value>yyyy-MM-dd</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>冻结/解冻受理日期</value></property>
+					<property name="path"><value>acceptDate</value></property>
+					<property name="cellFormat"><value>yyyy-MM-dd</value></property>
+				</bean>
+				<bean class="newland.iaf.utils.file.excel.CellDefine">
+					<property name="name"><value>状态</value></property>
+					<property name="path"><value>stat/desc</value></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+</beans>

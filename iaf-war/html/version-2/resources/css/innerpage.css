@@ -1,0 +1,251 @@
+﻿@charset "utf-8";
+/* Lizy4ever@2013.03 */
+
+/* nav */
+#nav{
+	background:url(../images/portal/bg-nav.gif) repeat-x;
+}
+#nav li{
+	height:30px;overflow:hidden;
+}
+#nav #nav-first{
+	margin-left:300px;
+}
+#nav a{
+	color:#fff;
+}
+#nav .cur,#nav .hover{
+	background:url(../images/portal/bg-nav-hover.gif) no-repeat left bottom;
+}
+#nav .cur a,#nav .hover a{
+	color:#0157ad;
+}
+
+#tips{
+	height:110px;padding:0 10px;background:#fff;border:1px solid #e2e2e2;
+}
+#tips .tip1{
+	color:#7a7a7a;font-size:13px;font-weight:bold;padding:8px 0;text-indent:15px;
+}
+#tips .tip2{
+	color:#8e8e8e;padding-top:5px;text-indent:35px;
+}
+#tips .tip2 a{
+	color:#007fff;text-decoration:underline;
+}
+#tips .steps{
+	height:50px;margin:0 auto;
+}
+.steps li{
+	float:left;
+}
+.steps li span{
+	display:none;
+}
+.steps .reg{
+	display:block;width:225px;height:50px;
+}
+.ask-steps{
+	background:url(../images/portal/bg-ask-steps.gif) no-repeat;
+}
+.offer-steps{
+	background:url(../images/portal/bg-offer-steps.gif) no-repeat;
+}
+#gold-keeper{
+	height:225px;margin-top:10px;
+}
+#about-offer{
+	height:175px;margin-top:10px;
+}
+
+#inner-ad{
+	text-align:center;margin-top:12px;
+}
+
+.main-search label,.search-btn{
+	margin-left:15px;
+}
+
+#prods{
+	width:1000px;margin:10px auto;
+}
+
+.main-search .pager{
+	position:absolute;right:25px;top:12px;
+}
+.main-search .pager a{
+	display:inline-block;padding:2px 5px;border:1px solid #d1d1d1;color:#4a4a4a;
+}
+.main-search .pager a.cur,.main-search .pager a:hover{
+	background:#0157ad;color:#fff;
+}
+
+/*--注册页面--*/
+#main-reg{
+	background:url(../images/portal/bg-main-reg.gif) repeat-x #fff;
+}
+#main-reg .content{
+	width:800px;padding:30px 100px 0;margin:0 auto;
+}
+.tab-reg{
+	height:38px;position:relative;bottom:-2px;
+}
+.tab-reg li{
+	float:left;width:178px;height:38px;line-height:38px;background:url(../images/portal/tab-reg.gif) no-repeat -178px 0 #fff;margin:0 3px;color:#676767;font-size:16px;font-weight:bold;text-align:center;letter-spacing:1px;cursor:pointer;
+}
+.tab-reg li.cur{
+	background-position:0 0;color:#3379C0;
+}
+.tab-reg .gold-keeper{
+	color:red;
+}
+.reg-fields{
+	padding:20px;font-size:13px;line-height:45px;
+}
+.reg-fields label{
+	display:inline-block;width:110px;text-align:right;padding-right:10px;
+}
+.reg-fields input,.reg-fields select,.reg-fields label,.reg-fields img{
+	vertical-align:middle;
+}
+.reg-input{
+	width:250px;height:25px;
+}
+#main-reg select{
+	width:120px;height:25px;padding:4px 0;
+}
+#main-reg .red{
+	color:red;
+}
+.reg-uop{
+	padding-left:125px;
+}
+.reg-uop button{
+	height:31px;border:0;background:url(../images/portal/bg-btn.gif) repeat-x;color:#fff;font-size:13px;font-weight:bold;cursor:pointer;
+}
+.reg-uop a{
+	color:#3379c0;font-weight:bold;
+}
+.reg-fields strong{
+	font-size:15px;
+}
+
+/*--登录页面--*/
+#main-login{
+	width:1000px;margin:30px auto;
+}
+.tab-login{
+	height:38px;position:relative;bottom:-1px;
+}
+.tab-login li{
+	float:left;width:178px;height:38px;line-height:38px;background:url(../images/portal/tab-reg.gif) no-repeat -178px 0 #fff;margin-right:6px;color:#676767;font-size:16px;font-weight:bold;text-align:center;letter-spacing:2px;cursor:pointer;
+}
+.tab-login li.cur{
+	background-position:0 0;color:#3379C0;
+}
+.login-fields{
+	height:350px;background:#fff url(../images/portal/bg-login.gif) no-repeat 580px 30px;border:1px solid #b2b2b2;
+}
+#merch-login,#inst-login{
+	height:300px;padding:20px 20px 30px;font-size:13px;line-height:46px;position:relative;
+}
+.login-fields label{
+	display:inline-block;width:110px;text-align:right;padding-right:10px;color:#343434;font-size:15px;font-weight:bold;
+}
+#inst-login label{
+	width:130px;
+}
+#usb-key-login .row{
+	line-height:36px;
+}
+.login-input{
+	width:250px;height:28px;line-height:28px;
+}
+#main-login select{
+	width:120px;height:25px;padding:4px 0;
+}
+#main-login input,#main-login select,#main-login label,#main-login img{
+	vertical-align:middle;
+}
+#main-login form{
+	padding-top:30px;
+}
+#inst-login form{
+	padding-top:10px;
+}
+#main-login .row{
+	padding:5px;
+}
+#main-login .btn-row{
+	padding-left:150px;margin-top:15px;
+}
+#main-login .login-btn{
+	display:block;width:148px;height:46px;background:url(../images/portal/bg-login-btn.gif) no-repeat;
+}
+.login-btn span{
+	display:none;
+}
+#join-merch{
+	position:absolute;width:159px;height:43px;right:139px;bottom:36px;
+}
+#join-merch span{
+	display:none;
+}
+
+/*--帮助页面--*/
+#main-con{
+	float:right;
+	width:715px;
+	padding:0 15px 15px 0;
+	font-size:14px;
+}
+#main-con .title{
+	background:url(../images/portal/title-bg.gif) repeat-x;
+	font-size:16px;
+	font-weight:bold;
+	color:#0d549c;
+	height:34px;
+	line-height:34px;
+	padding-left:20px;
+}
+#main-con .title em{
+	background-color:#f1f1f1;
+	padding:0 8px;
+	height:34px;
+	display:inline-block
+}
+#main-con p{
+	margin:10px 0;
+}
+.help-bg{
+	background:url(../images/portal/help-bg.gif) repeat-y
+}
+#sidenav{
+	float:left;
+	width:243px;
+	font-weight:bold;
+}
+.sidenav-bg{
+	background:url(../images/portal/sidenav-bg.gif) repeat-x;
+	padding-bottom:15px
+}
+.sidenav-bg li{
+	padding:15px 0 0 20px;
+}
+.sidenav-title{
+	background:url(../images/portal/sidenav-title.gif) no-repeat;
+	font-size:16px;
+	display:block;
+	height:30px;
+	color:#0d549c;
+	padding:10px 0 0 30px;
+}
+#sidenav a{
+	background:url(../images/portal/help-tab.gif) no-repeat;
+	padding-left:20px;
+	font-size:14px;
+	color:#666666;
+	height:16px;
+	line-height:16px;
+	display:block
+}

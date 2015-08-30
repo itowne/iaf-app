@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>汇融易 - 机构管理后台</title>
+<meta name="keywords" content="汇融易,借款,放贷,经营流水,汇卡商务" />
+<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+<link rel="stylesheet" type="text/css" href="../resources/css/mp-workframe.css"/>
+<style type="text/css">
+#tab{
+		position:absolute;width:40px;overflow:hidden;padding:20px 0 0;left:-3px;top:36px;background:url(../resources/images/mp/bg-inst-tab.gif) repeat-y;
+	}
+	#tab li{
+		width:31px;height:97px;overflow:hidden;padding:20px 0 0 3px;letter-spacing:10px;text-align:center;cursor:pointer;font-weight:bold;border-bottom:1px solid #dadada;
+	}
+	#tab li.cur{
+		height:106px;padding:30px 0 0 6px;background:url(../resources/images/mp/bg-inst-tab-cur.gif) no-repeat;color:#fff;border:0;
+	}
+</style>
+</head>
+
+<body style="position:relative;">
+<div id="workframe-wrapper" class="clearfix">
+  <div id="location">
+    <p>当前位置：贷后管理&nbsp;&gt;&gt;&nbsp;风险监控&nbsp;&gt;&gt;&nbsp;商户风险明细</p>
+  </div>
+  <div id="content" class="report" style="padding:10px 10px 10px 50px;">
+    <h3 style="line-height:32px;text-align:center;font-size:15px;">商 户 风 险 提 示</h3>
+    <h3 style="line-height:32px;text-align:center;font-size:15px;">(仅供参考)</h3>
+    <table width="550" border="0" cellspacing="0" cellpadding="0" class="data-table">
+    	<tr>
+    		<td class="label">经营风险提示</td>
+    		<td class="data"><pre>• 商户撤销了3台交易机具。
+• 经营面积已缩减为30平方米。
+• 上个月的营业额比每期偿还的金额少</pre></td>
+    	</tr>
+    	<tr>
+    		<td class="label">借贷风险提示</td>
+    		<td class="data"><pre>• 商户已有2笔借款出现还款逾期状况。
+• 商户有3笔借款申请审核不通过。</pre></td>
+    	</tr>
+    	<tr>
+    		<td class="label">交易风险提示</td>
+    		<td class="data"><pre>• 商户已经连续15天交易额以50%的幅度下降.
+• 商户已经连续3天没有任何交易.</pre></td>
+    	</tr>
+    	<tr>
+    		<td class="label">商业信誉风险</td>
+    		<td class="data"><pre>• 商户与中国电信有经济纠纷</pre></td>
+    	</tr>
+    </table>
+    <div style="margin:15px auto;text-align:center;">
+    	<a href="risk-monitoring.html" class="dark-btn">确定</a>
+    </div>
+  </div>
+</div>
+<script src="../resources/js/jquery-min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+			$(function(){
+				$(".data-list tr:even").addClass("even");
+				$(".data-list tr").hover(function(){
+					$(this).addClass("hover");
+				},function(){
+					$(this).removeClass("hover");
+				});
+				$(".dark-btn").hover(function(){
+					$(this).addClass("dark-btn-hover");
+				},function(){
+					$(this).removeClass("dark-btn-hover");
+				});
+				//$("#tab").height($("#workframe-wrapper").height());
+				var h = $("#workframe-wrapper").height();
+				if(h < 648){
+					$("#workframe-wrapper").height(700)
+				}
+			});
+		</script> 
+<!--[if IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+</body>
+</html>

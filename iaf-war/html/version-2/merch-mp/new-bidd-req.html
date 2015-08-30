@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>汇融易 - 商户管理后台</title>
+		<meta name="keywords" content="汇融易,借款,放贷,经营流水,汇卡商务" />
+		<meta name="description" content="全国首家只需经营流水即可借贷的投融资服务平台" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/mp-workframe.css"/>
+		<style type="text/css">
+			#content .detail-table{
+				padding:10px 0;
+			}
+			#content .detail-table td{
+				line-height:32px;
+			}
+			#content .detail-table td.label{
+				color:#606060;font-size:13px;font-weight:bold;
+			}
+			#content .detail-table input{
+				padding:2px 3px;
+			}
+			#content .detail-table select{
+				padding:3px;height:23px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content" class="dialog">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="detail-table">
+				<tr>
+					<td class="label">借款金额：</td>
+					<td><input type="text"/>&nbsp;(万元)</td>
+				</tr>
+				<tr>
+					<td class="label">借款期限：</td>
+					<td><input type="text"/>&nbsp;(个月)</td>
+				</tr>
+				<tr>
+					<td class="label">年利率：</td>
+					<td><input type="text"/>&nbsp;%</td>
+				</tr>
+				<tr>
+					<td class="label">还款方式：</td>
+					<td><select><option>请选择还款方式</option><option>分期还款</option><option>一次归还</option></select></td>
+				</tr>
+				<tr>
+					<td class="label">借款地区：</td>
+					<td><select><option>请选择省</option><option>广东</option></select>&nbsp;&nbsp;<select><option>请选择市</option><option>广州</option><option>东莞</option></select></td>
+				</tr>
+				<tr>
+					<td class="label">受理机构：</td>
+					<td>
+						<input type="radio" name="inst" id="inst-1"/>&nbsp;<label for="inst-1">工商银行</label>
+						<input type="radio" name="inst" id="inst-2"/>&nbsp;<label for="inst-2">民生银行</label>
+						<input type="radio" name="inst" id="inst-3"/>&nbsp;<label for="inst-3">人人贷</label>
+						&nbsp;&nbsp;&nbsp;<a href="javascript:showMoreInst();" id="more-inst-link">显示更多机构</a>
+						<br/>
+						<div id="other-inst" style="display:none;">
+							<input type="radio" name="inst" id="inst-1"/>&nbsp;<label for="inst-1">工商银行</label>
+							<input type="radio" name="inst" id="inst-2"/>&nbsp;<label for="inst-2">民生银行</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<font style="color:#ff660a;">（你的企业资料和信用报告将会向你上述所选的申请受理机构公开）</font>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">借款用途：</td>
+					<td>
+						<textarea rows="5" cols="35"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td class="label">&nbsp;</td>
+					<td height="42"><button class="dark-btn" onclick="closeDialog();">确&nbsp;定</button>&nbsp;&nbsp;&nbsp;<button class="dark-btn">取&nbsp;消</button></td>
+				</tr>
+			</table>
+		</div>
+		<script src="../resources/js/jquery-min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".dark-btn").hover(function(){
+					$(this).addClass("dark-btn-hover");
+				},function(){
+					$(this).removeClass("dark-btn-hover");
+				});
+			});
+			function closeDialog(){
+				var id = $("body").attr("id");
+				parent.closeDialog(id);
+			}
+			function showMoreInst(){
+				$("#more-inst-link").hide();
+				$("#other-inst").show();
+			}
+		</script>
+		<!--[if IE 6]><script type="text/javascript">try{document.execCommand("BackgroundImageCache",false,true);}catch(e){}</script><![endif]-->
+	</body>
+</html>

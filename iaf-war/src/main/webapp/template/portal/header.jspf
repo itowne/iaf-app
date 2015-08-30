@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+	<%@ taglib uri="/struts-tags" prefix="s" %>
+<header id="header" class="clearfix">
+	<hgroup id="site">
+		<h1 id="site-title">
+			<a href="javascript:void(0);" id="logo"><span>汇融易</span></a>
+		</h1>
+		<h2 id="site-description">
+			<span>助力企业释放能量</span>
+		</h2>
+	</hgroup>
+	<div id="guide" style="width:230px">
+	<s:if test='#session.loginName!=null'>
+		<s:if test='#session.type=="merch"'>
+			<a style="margin-left: 85px" href="${ctx}/merchLogin!homepageLogin"><s:property value="%{#session.loginName}"/></a>|<a href="${ctx}/merchLogin!logout">退出</a>
+		</s:if>
+		<s:elseif test='#session.type=="inst"'>
+			<a style="margin-left: 85px" href="${ctx}/instUserLogin!homepageLogin"><s:property value="%{#session.loginName}"/></a>|<a href="${ctx}/instUserLogin!logout">退出</a>
+		</s:elseif>
+		<s:elseif test='#session.type=="iaf"'>
+			<a style="margin-left: 85px" href="${ctx}/iafLogin!homepageLogin"><s:property value="%{#session.loginName}"/></a>|<a href="${ctx}/iafLogin!logout">退出</a>
+		</s:elseif>
+	</s:if>
+	<s:else>
+		<a style="margin-left: 85px" href="${ctx}/merchLogin.jsp">登录</a>|<a href="${ctx}/merchReg">注册</a>
+	</s:else>
+		<br/><span>客服热线：400-628-6928</span>
+	</div>
+</header>
+<%@include file="/template/portal/nav.jspf"%>
